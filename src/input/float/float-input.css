@@ -1,0 +1,68 @@
+.form-field--is-active .form-field__control::after {
+    border-bottom: 0.2rem solid var(--primaryAlpha);
+    transform: scaleX(300);
+}
+
+.form-field--is-active .form-field__label {
+    color: var(--primaryAlpha);
+    font-size: 0.7rem;
+    transform: translateY(-1.3em);
+}
+
+.form-field--is-filled .form-field__label {
+    font-size: 0.7rem;
+    transform: translateY(-1rem);
+}
+
+.form-field__label {
+    display: block;
+    font-size: 0.9rem;
+    left: 0;
+    margin: 0;
+    padding: 1.6rem 0 0 0rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: all 0.4s;
+}
+
+.form-field__control {
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.form-field__control::after {
+    border-bottom: 0.2rem solid var(--primaryAlpha);
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    transform: scaleX(0);
+    transition: all 0.7s;
+    /* width: 1%; */
+}
+
+.form-field__input {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-bottom: 0.05rem solid var(--primaryAlpha);
+    display: block;
+    font-size: 1.25em;
+    margin-top: 1.3em;
+    outline: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.3rem;
+    padding-right: 0.2rem;
+    width: 100%;
+}
+
+.form-field__input:focus {
+    border-bottom: 0.05rem solid var(--primary);
+}

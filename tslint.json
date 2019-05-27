@@ -1,0 +1,29 @@
+{
+    "extends": [
+        "tslint:latest",
+        "tslint-react",
+        "tslint-react-a11y",
+        "tslint-immutable",
+        "tslint-consistent-codestyle",
+        "tslint-config-airbnb"
+    ],
+    "rules": {
+        "max-line-length": {
+            "options": {
+                "limit": 120
+            }
+        },
+        "no-duplicate-imports": true,
+        "import-name": false,
+        "quotemark": {
+            "options": "double"
+        },
+        "interface-over-type-literal": false,
+        "triple-equals": true,
+        "ter-indent": false,
+        "jsx-no-multiline-js": false,
+        "indent": {
+            "options": "spaces"
+        }
+    }
+}

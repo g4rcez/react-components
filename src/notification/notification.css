@@ -1,0 +1,161 @@
+.notify-message {
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    z-index: 1010;
+    pointer-events: none;
+}
+.notify-message-notice {
+    padding: 8px;
+    text-align: center;
+}
+.notify {
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: fixed;
+    z-index: 1010;
+    min-width: 23em;
+    max-width: calc(100vw - 32px);
+    margin-right: 0;
+}
+.notify-topLeft,
+.notify-bottomLeft {
+    margin-left: 24px;
+    margin-right: 0;
+}
+.notify-topLeft .notify-fade-enter.notify-fade-enter-active,
+.notify-bottomLeft .notify-fade-enter.notify-fade-enter-active,
+.notify-topLeft .notify-fade-appear.notify-fade-appear-active,
+.notify-bottomLeft .notify-fade-appear.notify-fade-appear-active {
+    -webkit-animation-name: NotificationLeftFadeIn;
+    animation-name: NotificationLeftFadeIn;
+}
+.notify-close-icon {
+    font-size: 14px;
+    cursor: pointer;
+}
+.notify-notice {
+    padding: 16px 24px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    line-height: 1.5;
+    position: relative;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+.notify-notice-message {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 8px;
+    line-height: 24px;
+    display: inline-block;
+}
+.notify-notice-message-single-line-auto-margin {
+    width: calc(384px - 24px * 2 - 24px - 48px - 100%);
+    background-color: transparent;
+    pointer-events: none;
+    display: block;
+    max-width: 4px;
+}
+.notify-notice-message-single-line-auto-margin:before {
+    content: "";
+    display: block;
+}
+.notify-notice-description {
+    font-size: 14px;
+}
+.notify-notice-closable .notify-notice-message {
+    padding-right: 24px;
+}
+.notify-notice-with-icon .notify-notice-message {
+    font-size: 16px;
+    margin-left: 48px;
+    margin-bottom: 4px;
+}
+.notify-notice-with-icon .notify-notice-description {
+    margin-left: 48px;
+    font-size: 14px;
+}
+.notify-notice-icon {
+    position: absolute;
+    font-size: 24px;
+    line-height: 24px;
+    margin-left: 4px;
+}
+.notify-notice-closable {
+    padding-right: 20px;
+}
+.notify-notice-close {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    color: #202020;
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: 0.2;
+    text-decoration: none;
+    margin-right: 6px;
+    margin-top: 6px;
+}
+.notify-notice-close-x:after {
+    content: "×";
+}
+.notify-notice-close:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    text-decoration: none;
+}
+.notify-fade-enter {
+    opacity: 0;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+    animation-play-state: paused;
+}
+.notify-fade-leave {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+    animation-play-state: paused;
+}
+.notify-fade-enter.notify-fade-enter-active {
+    animation-name: rcNotificationFadeIn;
+    animation-play-state: running;
+}
+.notify-fade-leave.notify-fade-leave-active {
+    animation-name: rcDialogFadeOut;
+    animation-play-state: running;
+}
+@keyframes rcNotificationFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes rcDialogFadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
